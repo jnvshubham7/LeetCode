@@ -10,7 +10,7 @@ public:
     void rotate(vector<vector<int>>& mt) {
 
         
-        
+
     }
 };
 // @lc code=end
