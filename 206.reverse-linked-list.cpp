@@ -19,35 +19,19 @@ class Solution {
 public:
     ListNode* reverseList(ListNode* head) {
 
-        ListNode* prev = NULL;
+        ListNode* prev = nullptr;
         ListNode* curr = head;
+        while(curr != nullptr)
 
-        while(curr != NULL)
         {
-
-            
-
+            ListNode* nextTemp =  curr->next;
+            curr->next = prev;
+            prev = curr;
+            curr = nextTemp;
         }
 
-        // ListNode* prev = nullptr;
-        // ListNode* curr = head;
 
-        // while(curr != nullptr){
-        //     ListNode* nextTemp = curr->next;
-        //     curr->next = prev;
-        //     prev = curr;
-        //     curr = nextTemp;
-        // }
-
-        // return prev;
-
-        // iterative approach
-        // time complexity : O(n)
-        // space complexity : O(1)
-
-        // can we do this recursively?
-        // yes we can do this recursively
-        // but the space complexity will be O(n) for recursion stack
+        return prev;
         
     }
 };
